@@ -15,11 +15,12 @@ var (
 
 func InitMySql() (*gorm.DB, error) {
 	// 数据库配置等信息
-	username := "root"
-	password := "password"
-	host := "localhost"
-	port := "3306"
-	dbName := "mysql"
+	// golang:4_wvcLDCfhw.U4P12345@tcp(sh-cynosdbmysql-grp-o11thlf4.sql.tencentcdb.com:22547)/golang?charset=utf8mb4&parseTime=True&loc=Local
+	username := "golang"
+	password := "4_wvcLDCfhw.U4P12345@tcp"
+	host := "sh-cynosdbmysql-grp-o11thlf4.sql.tencentcdb.com"
+	port := "22547"
+	dbName := "golang"
 	url := fmt.Sprintf("%s:%s(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local", username, password, host, port, dbName)
 	log.Println("建立数据库连接url: " + url)
 	// 这里无法直接赋值给DB

@@ -24,3 +24,8 @@ type StudentEntity struct {
 	ClassNo   string
 	CollegeNo string
 }
+
+// TableName 这个方法可以给entity类起别名
+func (StudentEntity) TableName() string {
+	return "student"
+}

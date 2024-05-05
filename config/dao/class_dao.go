@@ -20,6 +20,6 @@ func (ClassDao) CreateStudent(student *entity.StudentEntity) (int64, error) {
 func (ClassDao) GetStudent() (*entity.StudentEntity, error) {
 	student := &entity.StudentEntity{}
 	// First方法默认按照主键升序排列
-	err := db.DB.First(student).Error
+	err := db.DB.Table("student").First(student).Error
 	return student, err
 }

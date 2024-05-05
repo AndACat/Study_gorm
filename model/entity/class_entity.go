@@ -20,3 +20,7 @@ type ClassEntity struct {
 	ClassName string
 	CollegeNo string
 }
+
+func (ClassEntity) TableName() string {
+	return "class"
+}
