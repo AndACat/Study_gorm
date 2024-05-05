@@ -18,3 +18,7 @@ type CollegeEntity struct {
 	CollegeNo   string
 	CollegeName string
 }
+
+func (CollegeEntity) TableName() string {
+	return "college"
+}
